@@ -75,20 +75,23 @@
     .hero {
       padding: 6rem 2rem; /* Vertical padding and horizontal padding */
       max-width: 800px; /* Max width for content alignment */
+      /* Adjusted margin to align with logo */
       margin-top: 100px;
       margin-left: 230px; /* Set hero's left margin */
       margin-right: auto; /* Allow auto right margin for centering */
-      text-align: center; /* Centered content within the hero section */
+      text-align: left;
     }
     .hero h1 {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      /* Removed margin-left to align with max-width centering */
     }
     .hero p {
       font-size: 1.2rem;
       color: #ccc;
       margin-bottom: 2rem;
+      /* Removed margin-left to align with max-width centering */
     }
     .hero button {
       padding: 0.75rem 1.5rem;
@@ -99,6 +102,7 @@
       color: black;
       cursor: pointer;
       transition: background 0.3s;
+      /* Removed margin-left to align with max-width centering */
       font-family: 'Inter', sans-serif;
     }
     .hero button:hover {
@@ -119,9 +123,10 @@
     .section-content {
       padding: 4rem 2rem; /* Consistent vertical padding with hero */
       max-width: 800px; /* Consistent max-width with hero */
+      /* Adjusted margin to align with hero */
       margin-left: 230px; /* Set left margin to match hero */
       margin-right: auto; /* Allow auto right margin for centering */
-      text-align: center; /* Centered content within these sections */
+      text-align: left; /* Consistent text alignment */
     }
 
     .section-content h2 {
@@ -143,8 +148,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
       gap: 1.5rem; /* Space between project cards */
-      margin: 0 auto; /* Center the grid within its parent */
-      max-width: 100%; /* Ensure it doesn't overflow its parent's max-width */
     }
 
     .project-card {
@@ -153,7 +156,6 @@
       border-radius: 8px;
       border: 1px solid #333;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: left; /* Keep text within cards left-aligned */
     }
 
     .project-card:hover {
@@ -182,6 +184,13 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
+    
+    .project-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+    }
 
     .project-card a:hover {
       background-color: #555;
@@ -192,9 +201,6 @@
       display: flex;
       flex-direction: column;
       gap: 1rem; /* Space between form elements */
-      align-items: center; /* Center form elements horizontally */
-      max-width: 400px; /* Constrain form width */
-      margin: 0 auto; /* Center the form itself */
     }
 
     .contact-form input,
@@ -206,7 +212,6 @@
       color: white;
       font-size: 1rem;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      width: 100%; /* Make inputs take full width of form */
     }
 
     .contact-form input::placeholder,
@@ -236,7 +241,7 @@
       cursor: pointer;
       transition: background 0.3s;
       font-family: 'Inter', sans-serif;
-      /* Removed align-self: flex-start; to allow centering by parent */
+      align-self: flex-start; /* Align button to the left */
     }
 
     .contact-form button:hover {
@@ -348,7 +353,6 @@
 
   <div class="background-image"></div>
 
-  <!-- About Section -->
   <section id="about" class="section-content">
     <h2>About Me</h2>
     <p>
@@ -367,26 +371,29 @@
     </p>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="section-content">
     <h2>My Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio showcasing my skills and projects, built with HTML and CSS.</p>
+        <img src="https://via.placeholder.com/400x250?text=Project+Image+1" alt="Project 1">
+        <h3>Mock Websites</h3>
+        <p>A Mock Websites showcasing my skills and projects, built with HTML and CSS.</p>
         <a href="#">View Project</a>
       </div>
       <div class="project-card">
+        <img src="https://via.placeholder.com/400x250?text=Project+Image+2" alt="Project 2">
         <h3>Interactive To-Do List</h3>
         <p>A dynamic to-do application developed using JavaScript, featuring task management.</p>
         <a href="#">View Project</a>
       </div>
       <div class="project-card">
+        <img src="https://via.placeholder.com/400x250?text=Project+Image+3" alt="Project 3">
         <h3>Responsive Landing Page</h3>
         <p>A modern, responsive landing page design for a fictional startup, optimized for all devices.</p>
         <a href="#">View Project</a>
       </div>
       <div class="project-card">
+        <img src="https://via.placeholder.com/400x250?text=Project+Image+4" alt="Project 4">
         <h3>Simple Calculator App</h3>
         <p>A basic calculator web application, demonstrating fundamental JavaScript logic and UI design.</p>
         <a href="#">View Project</a>
@@ -394,7 +401,16 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <section id="data-engineering-jobs" class="section-content">
+    <h2>Data Engineering</h2>
+    <p>Data engineering focuses on building and maintaining the infrastructure and systems that collect, store, and process large datasets. This involves creating pipelines, designing databases, and ensuring data quality and accessibility for data scientists and analysts.</p>
+  </section>
+
+  <section id="data-entry-jobs" class="section-content">
+    <h2>Data Entry Jobs</h2>
+    <p>Data entry jobs involve inputting, updating, and maintaining information in various digital formats, such as spreadsheets, databases, and forms. This role requires high accuracy, attention to detail, and often involves tasks like transcription, typing, and record management.</p>
+  </section>
+
   <section id="contact" class="section-content">
     <h2>Get in Touch</h2>
     <p>Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.</p>
